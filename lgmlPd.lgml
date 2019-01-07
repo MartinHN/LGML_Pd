@@ -1,0 +1,249 @@
+{
+  "metaData": {
+    "version": "1.2.10",
+    "versionNumber": 66058
+  },
+  "NodesUI": {
+    "_tName": "t_ParameterContainer",
+    "uid": "5d8dc087e9cd4434a95bcb06c77d594b",
+    "parameters": {
+      "Contains Savable Objects": false,
+      "preset": ""
+    },
+    "/": {
+      "NodeManagerUI": {
+        "_tName": "t_ParameterContainer",
+        "uid": "297914bf106d46158c04ffeb3766f0f8",
+        "parameters": {
+          "Contains Savable Objects": false,
+          "preset": ""
+        },
+        "/": {
+          "AudioDeviceIn": {
+            "_tName": "t_ParameterContainer",
+            "uid": "bfb4d7ec0c2446eab78a74ec542bdb55",
+            "parameters": {
+              "Contains Savable Objects": false,
+              "preset": "",
+              "nodePosition": [
+                75,
+                57
+              ],
+              "nodeMinimizedPosition": [
+                10,
+                100
+              ],
+              "nodeSize": [
+                100,
+                80
+              ],
+              "miniMode": false
+            }
+          },
+          "AudioDeviceOut": {
+            "_tName": "t_ParameterContainer",
+            "uid": "2f0835ad9ede44d8ad03af9aa40fd9e7",
+            "parameters": {
+              "Contains Savable Objects": false,
+              "preset": "",
+              "nodePosition": [
+                597,
+                80
+              ],
+              "nodeMinimizedPosition": [
+                250,
+                100
+              ],
+              "nodeSize": [
+                100,
+                80
+              ],
+              "miniMode": false
+            }
+          },
+          "Pd": {
+            "_tName": "t_ParameterContainer",
+            "uid": "6f22d8fc0322435e9d7eb0de8dc4b156",
+            "parameters": {
+              "Contains Savable Objects": false,
+              "preset": "",
+              "nodePosition": [
+                233,
+                104
+              ],
+              "nodeMinimizedPosition": [
+                37,
+                231
+              ],
+              "nodeSize": [
+                250,
+                100
+              ],
+              "miniMode": false
+            }
+          }
+        }
+      }
+    }
+  },
+  "nodeManager": {
+    "_tName": "t_NodeManager",
+    "uid": "b3e860bed54543bea1f06b2e5c8aef12",
+    "parameters": {
+      "Contains Savable Objects": false,
+      "preset": "",
+      "Description": ""
+    },
+    "/": {
+      "AudioDeviceIn": {
+        "_tName": "t_AudioDeviceInNode",
+        "uid": "48b308f40d99485bb68c00cad51bdd99",
+        "parameters": {
+          "Name": "AudioDeviceIn",
+          "Contains Savable Objects": false,
+          "preset": "",
+          "Description": "",
+          "Enabled": true,
+          "numAudioInput": 2,
+          "mute1": false,
+          "volume1": 0.80000001192092895508,
+          "mute2": false,
+          "volume2": 0.80000001192092895508
+        }
+      },
+      "AudioDeviceOut": {
+        "_tName": "t_AudioDeviceOutNode",
+        "uid": "2a5125e906944e608b935fb2fcac635f",
+        "parameters": {
+          "Name": "AudioDeviceOut",
+          "Contains Savable Objects": false,
+          "preset": "",
+          "Description": "",
+          "Enabled": true,
+          "numAudioOutput": 2,
+          "mute1": false,
+          "volume1": 0.80000001192092895508,
+          "mute2": false,
+          "volume2": 0.80000001192092895508
+        }
+      },
+      "Pd": {
+        "_tName": "t_PdNode",
+        "uid": "1ad2c19ffb8a4e1db27b9def95c0d47b",
+        "parameters": {
+          "Name": "Pd",
+          "Contains Savable Objects": false,
+          "preset": "",
+          "Description": "",
+          "Enabled": true,
+          "masterVolume": 0.80000001192092895508,
+          "MIDIControllerChooser": {
+            "selected": [],
+            "model": {
+            }
+          },
+          "pd path": "synth.pd",
+          "attack": 0.0,
+          "release": 0.0,
+          "decay": 78.74015718698501586914,
+          "sustain": 0.02362204715609550476,
+          "panic": false,
+          "curve": 0.10000000149011611938
+        }
+      }
+    },
+    "connections": [
+      {
+        "srcNode": "pd",
+        "dstNode": "audiodeviceout",
+        "connectionType": 0,
+        "links": [
+          {
+            "sourceChannel": 0,
+            "destChannel": 0
+          },
+          {
+            "sourceChannel": 1,
+            "destChannel": 1
+          }
+        ]
+      }
+    ]
+  },
+  "controllerManager": {
+    "_tName": "t_ParameterContainer",
+    "uid": "460019db33804feba4641d6c0f4e7f85",
+    "parameters": {
+      "Contains Savable Objects": false,
+      "preset": ""
+    },
+    "/": {
+      "MIDI": {
+        "_tName": "t_MIDIController",
+        "uid": "87fc0879286d4101802169ec89673789",
+        "parameters": {
+          "Name": "MIDI",
+          "Contains Savable Objects": false,
+          "preset": "",
+          "Enabled": true,
+          "MidiDeviceChooser": {
+            "selected": [
+              "Computer Keyboard"
+            ],
+            "model": {
+            }
+          },
+          "send MIDI Clock": false,
+          "send MIDI Position": false,
+          "MIDI clock offset": 0,
+          "Channel": 0
+        },
+        "/": {
+          "messages": {
+            "_tName": "t_ParameterContainer",
+            "uid": "008d3db5ed1c4b01a76e0120511c355d",
+            "parameters": {
+              "Name": "messages",
+              "Contains Savable Objects": false,
+              "preset": ""
+            }
+          },
+          "jsParams": {
+            "_tName": "t_ParameterContainer",
+            "uid": "727cb12bffb04af0aa5dab5d451013ec",
+            "parameters": {
+              "Name": "jsParams",
+              "Contains Savable Objects": false,
+              "preset": "",
+              "ScriptPath": ""
+            }
+          }
+        }
+      }
+    }
+  },
+  "timeManager": {
+    "_tName": "t_ParameterContainer",
+    "uid": "41f5a33c06384852803eb5aeca4e3b68",
+    "parameters": {
+      "Contains Savable Objects": false,
+      "preset": "",
+      "BPM": 120.0,
+      "Current Bar": 0,
+      "Current Beat": 0,
+      "Beat Per Bar": 4,
+      "Global Quantization": 1,
+      "Metronome": false,
+      "Metronome Volume": 0.5,
+      "Link": false
+    }
+  },
+  "fastMapper": {
+    "_tName": "t_FastMapper",
+    "uid": "6da2b80342794c4da5f173a02ecebb28",
+    "parameters": {
+      "Contains Savable Objects": false,
+      "preset": ""
+    }
+  }
+}
