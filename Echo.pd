@@ -1,0 +1,31 @@
+#N canvas 0 23 450 300 10;
+#X obj 12 220 adc~ 1;
+#X obj 12 399 dac~ 1;
+#X obj 68 314 r drywet;
+#X obj 12 333 LGMLdrywet;
+#N canvas 428 54 450 300 gui 1;
+#X obj 78 26 hsl 128 15 0 100 0 0 feedback empty feedback -2 -8 0 10
+-262144 -1 -1 12700 1;
+#X obj 74 71 hsl 128 15 0 1 0 0 drywet empty drywet -2 -8 0 10 -262144
+-1 -1 5900 1;
+#X obj 84 129 hsl 128 15 0 3 0 0 delay empty delay -2 -8 0 10 -262144
+-1 -1 6200 1;
+#X restore 164 203 pd gui;
+#X obj 286 339 *~ 0;
+#X obj 344 295 r feedback;
+#X obj 332 320 / 100;
+#X obj 47 255 r delay;
+#X obj 293 248 delwrite~ echo-del 3000;
+#X obj 47 295 delread~ echo-del 1000;
+#X obj 47 274 * 1000;
+#X connect 0 0 3 0;
+#X connect 0 0 9 0;
+#X connect 2 0 3 2;
+#X connect 3 0 1 0;
+#X connect 3 0 5 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 5 1;
+#X connect 8 0 11 0;
+#X connect 10 0 3 1;
+#X connect 11 0 10 0;
